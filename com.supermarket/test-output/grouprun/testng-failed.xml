@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [grouprun]" parallel="tests">
+  <listeners>
+    <listener class-name="com.supermarket.listeners.ExtentReporter"/>
+  </listeners>
+  <test thread-count="5" name="sanityrun(failed)" parallel="tests">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.supermarket.tests.LoginTest">
+        <methods>
+          <include name="verfiyInvalidCredentialsErrorMessage"/>
+        </methods>
+      </class> <!-- com.supermarket.tests.LoginTest -->
+    </classes>
+  </test> <!-- sanityrun(failed) -->
+</suite> <!-- Failed suite [grouprun] -->
