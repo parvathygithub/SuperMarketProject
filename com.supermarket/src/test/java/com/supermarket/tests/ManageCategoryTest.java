@@ -24,4 +24,18 @@ public class ManageCategoryTest extends Base {
 		Assert.assertTrue(imageStatus);
 	}
 
+	@Test(priority = 2)
+	public void verifyTheSearchButtonBackGroundColor() {
+
+		loginpage = new LoginPage(driver);
+		loginpage.login();
+		managecategorypage = new ManageCategoryPage(driver);
+		managecategorypage.clickOnManageCategory();
+		managecategorypage.clickOnCategory();
+		String expectedColor = "rgba(0, 123, 255, 1)";
+		String actualColor = managecategorypage.getSearchButtonBackgroundColor();
+		Assert.assertEquals(expectedColor, actualColor);
+
+	}
+
 }

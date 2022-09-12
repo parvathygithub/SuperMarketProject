@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29338" started-at="2022-09-12T01:38:33 IST" finished-at="2022-09-12T01:39:02 IST">
+  <suite name="Default suite" duration-ms="11303" started-at="2022-09-12T20:05:09 IST" finished-at="2022-09-12T20:05:21 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29338" started-at="2022-09-12T01:38:33 IST" finished-at="2022-09-12T01:39:02 IST">
+    <test name="Default test" duration-ms="11303" started-at="2022-09-12T20:05:09 IST" finished-at="2022-09-12T20:05:21 IST">
       <class name="com.supermarket.tests.ManageOfferCodeTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b]" name="setUp" is-config="true" duration-ms="13696" started-at="2022-09-12T01:38:33 IST" finished-at="2022-09-12T01:38:46 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b]" name="setUp" is-config="true" duration-ms="8184" started-at="2022-09-12T20:05:09 IST" finished-at="2022-09-12T20:05:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyThatAmountOfItem()[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b]" name="verifyThatAmountOfItem" duration-ms="15580" started-at="2022-09-12T01:38:46 IST" finished-at="2022-09-12T01:39:02 IST">
+        <test-method status="PASS" signature="verifyThatOfferCodeAlreadyExists()[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b]" name="verifyThatOfferCodeAlreadyExists" duration-ms="3059" started-at="2022-09-12T20:05:18 IST" finished-at="2022-09-12T20:05:21 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatAmountOfItem -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b]" name="tearDown" is-config="true" duration-ms="3" started-at="2022-09-12T01:39:02 IST" finished-at="2022-09-12T01:39:02 IST">
+        </test-method> <!-- verifyThatOfferCodeAlreadyExists -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b]" name="tearDown" is-config="true" duration-ms="2" started-at="2022-09-12T20:05:21 IST" finished-at="2022-09-12T20:05:21 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyThatAmountOfItem status=SUCCESS method=ManageOfferCodeTest.verifyThatAmountOfItem()[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b] output={null}]]]>
+                <![CDATA[[TestResult name=verifyThatOfferCodeAlreadyExists status=SUCCESS method=ManageOfferCodeTest.verifyThatOfferCodeAlreadyExists()[pri:0, instance:com.supermarket.tests.ManageOfferCodeTest@15b3e5b] output={null}]]]>
               </value>
             </param>
           </params>

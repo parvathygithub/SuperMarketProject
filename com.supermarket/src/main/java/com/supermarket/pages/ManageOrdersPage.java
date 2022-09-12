@@ -20,6 +20,9 @@ public class ManageOrdersPage {
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']")
 	private WebElement searchButton;
 
+	@FindBy(xpath = "//tr[6]//td[6]//a")
+	private WebElement changeStatus;
+
 	public ManageOrdersPage(WebDriver driver) {
 
 		this.driver = driver;
@@ -34,6 +37,13 @@ public class ManageOrdersPage {
 
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.getCssSelectorValue(searchButton, "background-color");
+
+	}
+
+	public String getChangeStatusBackgroundColor() {
+
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.getCssSelectorValue(changeStatus, "background-color");
 
 	}
 

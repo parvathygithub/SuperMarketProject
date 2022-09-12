@@ -12,7 +12,7 @@ public class AdminUsersTest extends Base {
 	AdminUsersPage adminuserspage;
 	LoginPage loginpage;
 
-	@Test(priority = 1)
+	@Test(priority = 1,groups = "smoke")
 	public void verifyifNewAdminUserCanBeCreated() {
 
 		loginpage = new LoginPage(driver);

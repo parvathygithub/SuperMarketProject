@@ -26,4 +26,16 @@ public class ManageOrdersTest extends Base {
 
 	}
 
+	@Test(priority = 2)
+	public void verifyTheChangeStatusColor() {
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.login();
+		manageorderspage = new ManageOrdersPage(driver);
+		manageorderspage.clickOnManageOrders();
+		String expectedColor = "rgba(40, 167, 69, 1)";
+		String actualColor = manageorderspage.getChangeStatusBackgroundColor();
+		Assert.assertEquals(expectedColor, actualColor);
+
+	}
+
 }

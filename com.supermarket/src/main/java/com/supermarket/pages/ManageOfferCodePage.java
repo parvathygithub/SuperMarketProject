@@ -41,6 +41,9 @@ public class ManageOfferCodePage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alertMessage;
 
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
+	private WebElement resetButton;
+
 	public ManageOfferCodePage(WebDriver driver) {
 
 		this.driver = driver;
@@ -102,6 +105,13 @@ public class ManageOfferCodePage {
 
 		generalutility = new GeneralUtility(driver);
 		return generalutility.getTextOfElement(alertMessage);
+
+	}
+
+	public String getResetButtonFontSize() {
+
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.getCssSelectorValue(resetButton, "font-size");
 
 	}
 

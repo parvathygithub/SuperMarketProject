@@ -29,14 +29,14 @@ public class ManageCategoryPage {
 	@FindBy(xpath = "//li[@id='1-selectable']")
 	private WebElement selectGroups1;
 
-	@FindBy(xpath = "//li[@id='2-selectable']")
-	private WebElement selectGroups2;
-
 	@FindBy(xpath = "//input[@id='main_img']")
 	private WebElement chooseFile;
 
 	@FindBy(xpath = "//button[text()='Save']")
 	private WebElement clickSaveButton;
+
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']")
+	private WebElement searchButton;
 
 	public ManageCategoryPage(WebDriver driver) {
 
@@ -71,7 +71,6 @@ public class ManageCategoryPage {
 	public void selectGroups() {
 
 		selectGroups1.click();
-		selectGroups2.click();
 
 	}
 
@@ -97,6 +96,13 @@ public class ManageCategoryPage {
 
 		generalutility = new GeneralUtility(driver);
 		return generalutility.isElementDisplayed(chooseFile);
+
+	}
+
+	public String getSearchButtonBackgroundColor() {
+
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.getCssSelectorValue(searchButton, "background-color");
 
 	}
 

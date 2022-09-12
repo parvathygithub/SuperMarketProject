@@ -25,4 +25,17 @@ public class ManageOfferCodeTest extends Base {
 
 	}
 
+	@Test(priority = 2)
+	public void verifyThatOfferCodeAlreadyExists() {
+
+		loginpage = new LoginPage(driver);
+		loginpage.login();
+		manageoffercodepage = new ManageOfferCodePage(driver);
+		manageoffercodepage.clickOnManageOfferCode();
+		String expectedAlertText = "16px";
+		String actualAlertText = manageoffercodepage.getResetButtonFontSize();
+		Assert.assertEquals(expectedAlertText, actualAlertText);
+
+	}
+
 }

@@ -6,7 +6,7 @@
       <class name="com.supermarket.tests.ManageOfferCodeTest">
         <methods>
           <include name="setUp_crossBrowser"/>
-          <include name="verifyThatAmountOfItem"/>
+          <include name="verifyThatOfferCodeAlreadyExists"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
