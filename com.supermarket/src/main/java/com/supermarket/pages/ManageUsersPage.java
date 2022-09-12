@@ -30,21 +30,16 @@ public class ManageUsersPage {
 	public void clickOnManageUsers() {
 		manageUsers.click();
 	}
-	
-	
+
 	public void clickOnUsersDeactivateButton(String userName) {
-		
-		         int j = 0;
+
+		int j = 0;
 
 		List<String> UsersName = new ArrayList<String>();
 		generalutility = new GeneralUtility(driver);
 		pageutility = new PageUtility(driver);
 		UsersName = generalutility.getTextOfElements("//tr//td[1]");
 
-		// for(String s :UsersName)
-		// {
-		// System.out.println(s);
-		// }
 		for (j = 0; j < UsersName.size(); j++) {
 			if (UsersName.get(j).equals(userName)) {
 				j++;
@@ -52,14 +47,13 @@ public class ManageUsersPage {
 			}
 		}
 		WebElement deactivateButton = driver.findElement(By.xpath("//tbody//tr[" + j + "]//td[5]//a"));
-		// deactivateButton.click();
+
 		pageutility.scrollAndclick(deactivateButton);
 
 	}
 
-	// public String getDeactivationsucessfullMessage()
 	{
-		// return
+
 	}
 
 }

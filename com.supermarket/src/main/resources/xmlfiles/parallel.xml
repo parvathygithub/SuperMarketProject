@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Parallelexecution" thread-count="3" parallel="tests">
-<test name="smokeRun">
-<classes>
-<class name="com.supermarket.tests.LoginTest">
-</class >
-<class name="com.supermarket.tests.ManageProductTest">
-</class>
-</classes>
-</test>
-<test name="reggression">
-<classes>
-<class name="com.supermarket.tests.ManageExpenseTest">
-</class >
-<class name="com.supermarket.tests.ManageSliderTest">
-</class>
-</classes>
-</test>
+	<test name="smokeRun">
+		<classes>
+			<class name="com.supermarket.tests.LoginTest"></class>
+			<class name="com.supermarket.tests.ManageCategoryTest"></class>
+		</classes>
+	</test>
+	<test name="reggression">
+		<classes>
+			<class name="com.supermarket.tests.ManageExpenseTest"></class>
+			<class name="com.supermarket.tests.ManageSliderTest"></class>
+		</classes>
+	</test>
 </suite>

@@ -82,13 +82,12 @@ public class ManageExpensePage {
 		clickOnSaveButton();
 
 	}
+
 	public String getTheTextOfAlertMessage() {
-		
-		generalutility=new GeneralUtility(driver);
+
+		generalutility = new GeneralUtility(driver);
 		return generalutility.getTextOfElement(alertText);
-		
+
 	}
 
-	
-	}
-
+}

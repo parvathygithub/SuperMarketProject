@@ -22,14 +22,14 @@ public class ManageCategoryPage {
 
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Category/add']")
 	private WebElement newButton;
-		
+
 	@FindBy(xpath = "//input[@class='form-control']")
 	private WebElement enterCategory;
-	
+
 	@FindBy(xpath = "//li[@id='1-selectable']")
-	private WebElement  selectGroups1;
-	
-	@FindBy(xpath="//li[@id='2-selectable']")
+	private WebElement selectGroups1;
+
+	@FindBy(xpath = "//li[@id='2-selectable']")
 	private WebElement selectGroups2;
 
 	@FindBy(xpath = "//input[@id='main_img']")
@@ -69,7 +69,7 @@ public class ManageCategoryPage {
 	}
 
 	public void selectGroups() {
-		
+
 		selectGroups1.click();
 		selectGroups2.click();
 
@@ -88,7 +88,8 @@ public class ManageCategoryPage {
 	public void uploadImage() {
 
 		pageutility = new PageUtility(driver);
-		pageutility.fileUpload(chooseFile,System.getProperty("user.dir") + "//UploadImage//" + "House Hold Items" + ".jpg");
+		pageutility.fileUpload(chooseFile,
+				System.getProperty("user.dir") + "//UploadImage//" + "House Hold Items" + ".jpg");
 		pageutility.scrollAndclick(clickSaveButton);
 	}
 

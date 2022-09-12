@@ -55,26 +55,26 @@ public class ManageLocationPage {
 		newButton.click();
 
 	}
-	
+
 	public void enterLocationField(String location) {
 
 		enterLocation.sendKeys(location);
 
 	}
-	
+
 	public void enterDeliverychargeField(String deliveryCharge) {
 
 		enterDeliveryCharge.sendKeys(deliveryCharge);
 
 	}
-	
+
 	public void clickOnSaveButton() {
-		
+
 		saveButton.click();
-		
+
 	}
 
-	public void enterLocalInformations(String country, String state, String location,String deliveryCharge) {
+	public void enterLocalInformations(String country, String state, String location, String deliveryCharge) {
 
 		clickOnManageLocation();
 		clickOnNewButton();

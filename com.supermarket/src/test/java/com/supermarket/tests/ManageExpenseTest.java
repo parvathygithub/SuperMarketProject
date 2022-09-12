@@ -11,29 +11,18 @@ public class ManageExpenseTest extends Base {
 
 	ManageExpensePage manageexpensepage;
 	LoginPage loginpage;
-	
-	
-	@Test
-public void verifyThatExpenseCategoryCreatedSuccessfullyOrNot() {
-		
+
+	@Test(priority = 1)
+	public void verifyThatExpenseCategoryCreatedSuccessfullyOrNot() {
+
 		loginpage = new LoginPage(driver);
 		loginpage.login();
-		manageexpensepage= new ManageExpensePage(driver);
+		manageexpensepage = new ManageExpensePage(driver);
 		manageexpensepage.enterProduct("CashewNut");
-		String expectedAlertText="Alert!";
-		String actualAlertText=manageexpensepage.getTheTextOfAlertMessage();
+		String expectedAlertText = "Alert!";
+		String actualAlertText = manageexpensepage.getTheTextOfAlertMessage();
 		Assert.assertEquals(expectedAlertText, actualAlertText);
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

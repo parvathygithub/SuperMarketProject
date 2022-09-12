@@ -11,7 +11,7 @@ public class ManageUsersTest extends Base {
 	ManageUsersPage manageuserspage;
 	LoginPage loginpage;
 
-	@Test
+	@Test(priority = 1)
 	public void verifyAdminUserDeactivation() {
 
 		LoginPage loginpage = new LoginPage(driver);
@@ -19,11 +19,7 @@ public class ManageUsersTest extends Base {
 		ManageUsersPage manageuserspage = new ManageUsersPage(driver);
 		manageuserspage.clickOnManageUsers();
 		manageuserspage.clickOnUsersDeactivateButton("Sree Parvathy");
-		// driver.findElement(By.xpath("//tbody//tr[5]//td[5]//a")).click();
+
 	}
 
-	
-	
-	
-	
 }

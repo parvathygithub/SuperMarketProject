@@ -11,38 +11,30 @@ public class MobileSliderTest extends Base {
 
 	MobileSliderPage mobilesliderpage;
 	LoginPage loginpage;
-	
-	
-	@Test
+
+	@Test(priority = 1)
 	public void verifyTheTextOfSelectedCategory() {
-		
+
 		loginpage = new LoginPage(driver);
 		loginpage.login();
-		mobilesliderpage=new MobileSliderPage(driver);
+		mobilesliderpage = new MobileSliderPage(driver);
 		mobilesliderpage.SelectCategoryDropDown("Snacks & Branded Foods");
-		String expectedText="Snacks & Branded Foods";
-		String actualText= mobilesliderpage.getTextOfSelectedCategoryDropDown();
+		String expectedText = "Snacks & Branded Foods";
+		String actualText = mobilesliderpage.getTextOfSelectedCategoryDropDown();
 		Assert.assertEquals(expectedText, actualText);
-		
+
 	}
-	
-	@Test
+
+	@Test(priority = 2)
 	public void verifyTheUploadImageIsDisplayed() {
-		
+
 		loginpage = new LoginPage(driver);
 		loginpage.login();
-		mobilesliderpage=new MobileSliderPage(driver);
+		mobilesliderpage = new MobileSliderPage(driver);
 		mobilesliderpage.uploadImage();
-		boolean imageStatus=mobilesliderpage.uploadImageIsDisplayed();
+		boolean imageStatus = mobilesliderpage.uploadImageIsDisplayed();
 		Assert.assertTrue(imageStatus);
-		
-		
+
 	}
-	
-	
-	
-	
-	
-	
 
 }

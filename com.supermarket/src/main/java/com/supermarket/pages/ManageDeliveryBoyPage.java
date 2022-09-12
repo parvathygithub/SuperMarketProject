@@ -42,10 +42,10 @@ public class ManageDeliveryBoyPage {
 
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	private WebElement saveButton;
-	
+
 	@FindBy(xpath = "//tr//td[6]")
 	private WebElement clickStatus;
-	
+
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alertStatus;
 
@@ -105,7 +105,7 @@ public class ManageDeliveryBoyPage {
 	}
 
 	public void addDeliveryBoyInformations() {
- 
+
 		clickOnManageDeliveryBoy();
 		clickOnNewButton();
 		pageutility = new PageUtility(driver);
@@ -124,18 +124,17 @@ public class ManageDeliveryBoyPage {
 		enterPassword(password);
 		pageutility.scrollAndclick(saveButton);
 	}
-	
+
 	public void clickOnStatus() {
-		
+
 		clickStatus.click();
 	}
-		
+
 	public String getTheTextOfAlertStatus() {
 		clickOnStatus();
 		generalutility = new GeneralUtility(driver);
 		return generalutility.getTextOfElement(alertStatus);
 
 	}
-	
 
 }

@@ -28,7 +28,7 @@ public class ManageProductPage {
 
 	@FindBy(xpath = "//select[@id='cat_id']")
 	private WebElement categoryDropDown;
-	
+
 	@FindBy(xpath = "//select[@id='cat_id']/option[2]")
 	private WebElement categoryDropDownText;
 
@@ -49,17 +49,17 @@ public class ManageProductPage {
 		newButton.click();
 
 	}
-	
+
 	public void enterTitle(String product) {
-		
+
 		enterTitle.sendKeys(product);
-		
+
 	}
-	
+
 	public void clickOnRadioButton() {
-		
+
 		nonveg_RadioButton.click();
-		
+
 	}
 
 	public void enterProductInformations(String product) {
@@ -71,11 +71,11 @@ public class ManageProductPage {
 
 	}
 
-	public String getTextOfCategoryDropDown() {
+	public String getTextOfCategoryDropDown(String category) {
 
 		pageutility = new PageUtility(driver);
 		generalutility = new GeneralUtility(driver);
-		pageutility.select_ByVisibleText(categoryDropDown, "Fruits & Vegetables");
+		pageutility.select_ByVisibleText(categoryDropDown, category);
 		return generalutility.getTextOfElement(categoryDropDownText);
 	}
 

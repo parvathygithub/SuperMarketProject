@@ -10,26 +10,19 @@ public class ManageLocationTest extends Base {
 
 	ManageLocationPage managelocationpage;
 	LoginPage loginpage;
-	
-	
-	
-	@Test
-	public void verifyEnterLocalInformation() {
-			
-			loginpage = new LoginPage(driver);
-			loginpage.login();
-			managelocationpage=new ManageLocationPage(driver);
-			managelocationpage.enterLocalInformations("United Kingdom", "England", "NorthWest","300" );
-			String expectedAlertText="United Kingdom";
-			String actualAlertText= managelocationpage.getTextOfselectCountry("United Kingdom");
-			System.out.println(actualAlertText);
-		    Assert.assertEquals(expectedAlertText, actualAlertText);
-	
-	
-	
-	}
-	
 
-	
+	@Test(priority = 1)
+	public void verifyEnterLocalInformation() {
+
+		loginpage = new LoginPage(driver);
+		loginpage.login();
+		managelocationpage = new ManageLocationPage(driver);
+		managelocationpage.enterLocalInformations("United Kingdom", "England", "NorthWest", "300");
+		String expectedAlertText = "United Kingdom";
+		String actualAlertText = managelocationpage.getTextOfselectCountry("United Kingdom");
+		System.out.println(actualAlertText);
+		Assert.assertEquals(expectedAlertText, actualAlertText);
+
+	}
 
 }

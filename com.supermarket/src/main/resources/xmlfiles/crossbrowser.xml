@@ -15,13 +15,13 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.supermarket.tests.ManageLocationTest"></class>
-			<class name="com.supermarket.tests.ManageProductTest"></class>
+			<class name="com.supermarket.tests.PushNotificationsTest"></class>
 		</classes>
 	</test>
 	<test name="reggressionfirefox">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="com.supermarket.tests.ManageProductTest"></class>
+			<class name="com.supermarket.tests.ManageDeliveryBoyTest"></class>
 			<class name="com.supermarket.tests.ManageSliderTest"></class>
 		</classes>
 	</test>

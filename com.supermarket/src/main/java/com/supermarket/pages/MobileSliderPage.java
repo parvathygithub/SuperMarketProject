@@ -72,42 +72,31 @@ public class MobileSliderPage {
 		pageutility = new PageUtility(driver);
 		pageutility.select_ByVisibleText(categoryDropDown, category);
 		saveButton.click();
-		
 
 	}
-	
+
 	public String getTextOfSelectedCategoryDropDown() {
-		
+
 		generalutility = new GeneralUtility(driver);
 		return generalutility.getTextOfElement(categoryDropDownText);
-		
+
 	}
-	
-	public void  uploadImage() {
-		
+
+	public void uploadImage() {
+
 		clickOnMobileSlider();
 		clickOnNewButton();
 		pageutility = new PageUtility(driver);
-		pageutility.fileUpload(chooseFile,System.getProperty("user.dir") + "//UploadImage//" + "Snacks & Branded  Foods" + ".jpg");
+		pageutility.fileUpload(chooseFile,
+				System.getProperty("user.dir") + "//UploadImage//" + "Snacks & Branded  Foods" + ".jpg");
 		saveButton.click();
-		
-		
+
 	}
-	
+
 	public boolean uploadImageIsDisplayed() {
 		generalutility = new GeneralUtility(driver);
 		return generalutility.isElementDisplayed(chooseFile);
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

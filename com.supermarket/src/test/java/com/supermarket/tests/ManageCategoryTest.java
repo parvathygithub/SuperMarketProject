@@ -12,7 +12,7 @@ public class ManageCategoryTest extends Base {
 	ManageCategoryPage managecategorypage;
 	LoginPage loginpage;
 
-	@Test
+	@Test(priority = 1)
 	public void verifythatUploadImageIsDisplayedOrNot() {
 
 		loginpage = new LoginPage(driver);
@@ -20,10 +20,8 @@ public class ManageCategoryTest extends Base {
 		managecategorypage = new ManageCategoryPage(driver);
 		managecategorypage.enterCateogryInformations("House Hold Items");
 		managecategorypage.uploadImage();
-		boolean imageStatus=managecategorypage.uploadImageIsDisplayedOrNot();
+		boolean imageStatus = managecategorypage.uploadImageIsDisplayedOrNot();
 		Assert.assertTrue(imageStatus);
 	}
-	
-	
 
 }

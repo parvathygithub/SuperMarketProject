@@ -22,10 +22,9 @@ public class ManageCODPage {
 
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	private WebElement saveButton;
-	
+
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alertMessage;
-	
 
 	public ManageCODPage(WebDriver driver) {
 
@@ -50,13 +49,12 @@ public class ManageCODPage {
 		saveButton.click();
 
 	}
-	
+
 	public void addCODInformations() {
-		
+
 		clickOnManageCoD();
 		clickOnRadioButton();
-		
-		
+
 	}
 
 	public String getTheTextOfAlertMessage() {
@@ -66,28 +64,5 @@ public class ManageCODPage {
 		return generalutility.getTextOfElement(alertMessage);
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

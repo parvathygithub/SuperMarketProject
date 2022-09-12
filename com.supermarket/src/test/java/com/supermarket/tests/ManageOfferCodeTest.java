@@ -1,5 +1,28 @@
 package com.supermarket.tests;
 
-public class ManageOfferCodeTest {
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.supermarket.base.Base;
+import com.supermarket.pages.LoginPage;
+import com.supermarket.pages.ManageOfferCodePage;
+
+public class ManageOfferCodeTest extends Base {
+
+	ManageOfferCodePage manageoffercodepage;
+	LoginPage loginpage;
+
+	@Test(priority = 1)
+	public void verifyThatOfferCreatedSuccessfullyOrNot() {
+
+		loginpage = new LoginPage(driver);
+		loginpage.login();
+		manageoffercodepage = new ManageOfferCodePage(driver);
+		manageoffercodepage.enterOfferCodeInformations("F101", "6%", "300");
+		String expectedAlertText = "×\n" + "Alert!\n" + "Offer Created Successfully";
+		String actualAlertText = manageoffercodepage.getTheTextOfAlertMessage();
+		Assert.assertEquals(expectedAlertText, actualAlertText);
+
+	}
 
 }

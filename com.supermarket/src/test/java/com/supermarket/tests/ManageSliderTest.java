@@ -12,7 +12,7 @@ public class ManageSliderTest extends Base {
 	ManageSliderPage managesliderpage;
 	LoginPage loginpage;
 
-	@Test
+	@Test(priority = 1)
 	public void verifyUploadImageIsDisplayed() {
 
 		loginpage = new LoginPage(driver);
@@ -23,13 +23,5 @@ public class ManageSliderTest extends Base {
 		Assert.assertTrue(uploadImageStatus);
 
 	}
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
 
 }

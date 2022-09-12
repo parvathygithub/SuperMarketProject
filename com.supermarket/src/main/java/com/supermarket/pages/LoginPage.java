@@ -24,10 +24,8 @@ public class LoginPage {
 	private WebElement invalidLoginalertMessage;
 	@FindBy(xpath = "//span[text()='7rmart supermarket']")
 	private WebElement profileImage;
-	
 	@FindBy(xpath = "(//a[@class='nav-link'])[2]")
 	private WebElement admin;
-	
 	@FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
 	private WebElement logout;
 	@FindBy(xpath = "//p[@class='login-box-msg']")
@@ -56,14 +54,14 @@ public class LoginPage {
 
 		signInButton.click();
 	}
-	
+
 	public void clickOnAdmin() {
-		
+
 		admin.click();
 	}
-	
+
 	public void clickOnLogout() {
-		
+
 		logout.click();
 	}
 
@@ -100,12 +98,12 @@ public class LoginPage {
 		return generalutility.isElementDisplayed(profileImage);
 
 	}
-	
+
 	public boolean getLogoutStatus() {
-		
+
 		generalutility = new GeneralUtility(driver);
 		return generalutility.isElementDisplayed(logoutStatus);
-		
+
 	}
 
 }

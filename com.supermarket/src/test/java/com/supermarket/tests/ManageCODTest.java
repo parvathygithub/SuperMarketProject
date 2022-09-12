@@ -12,7 +12,7 @@ public class ManageCODTest extends Base {
 	ManageCODPage manageCODpage;
 	LoginPage loginpage;
 
-	@Test
+	@Test(priority = 1)
 	public void verifyThatCODAddedSuccessfully() {
 
 		loginpage = new LoginPage(driver);

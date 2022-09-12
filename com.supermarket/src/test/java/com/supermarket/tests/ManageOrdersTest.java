@@ -12,7 +12,7 @@ public class ManageOrdersTest extends Base {
 	ManageOrdersPage manageorderspage;
 	LoginPage loginpage;
 
-	@Test
+	@Test(priority = 1)
 
 	public void verifySearchButtonColor() {
 

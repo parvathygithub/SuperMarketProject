@@ -1,6 +1,7 @@
 package com.supermarket.base;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -59,7 +60,7 @@ public class Base {
 		driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(WaitUtility.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	@BeforeMethod(enabled = true, alwaysRun = true)
@@ -88,7 +89,7 @@ public class Base {
 
 		}
 
-		//driver.close();
+		// driver.close();
 
 	}
 
