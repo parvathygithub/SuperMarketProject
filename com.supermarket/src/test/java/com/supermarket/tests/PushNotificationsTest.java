@@ -13,12 +13,12 @@ public class PushNotificationsTest extends Base {
 	LoginPage loginpage;
 
 	@Test(priority = 1)
-	public void verifyThatPushNotificationsMessageSendSuccessfully() {
+	public void  verifyThatTheNotificationMessageSendSuccessfullyOrNot () {
 
 		loginpage = new LoginPage(driver);
 		loginpage.login();
 		pushnotificationspage = new PushNotificationsPage(driver);
-		pushnotificationspage.addPushNotificationsInformations("Delivering Promotions",
+		pushnotificationspage.addPushNotificationsInformations("Delivering Promotions ",
 				"mobile orders and payments at no additional cost till Sept 2022");
 		String expectedAlertMessage = "×\n" + "Alert!\n" + "Message send successfully";
 		String actualAlertMessage = pushnotificationspage.getTheTextOfAlertMessage();

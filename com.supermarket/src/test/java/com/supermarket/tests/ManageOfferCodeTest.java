@@ -37,5 +37,17 @@ public class ManageOfferCodeTest extends Base {
 		Assert.assertEquals(expectedAlertText, actualAlertText);
 
 	}
+	
+	@Test(priority = 3)
+	public void verifyEnteredAmount() {
+
+		loginpage = new LoginPage(driver);
+		loginpage.login();
+		manageoffercodepage = new ManageOfferCodePage(driver);
+		manageoffercodepage.clickOnManageOfferCode();
+		String expectedAlertText = "£300";
+		String actualAlertText = manageoffercodepage.getEnteredAmount();
+		Assert.assertEquals(expectedAlertText, actualAlertText);
+	}
 
 }

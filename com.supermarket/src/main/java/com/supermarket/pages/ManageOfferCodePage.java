@@ -43,6 +43,11 @@ public class ManageOfferCodePage {
 
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
 	private WebElement resetButton;
+	
+	@FindBy(xpath = "//tbody//tr[1]//td[3]")
+	private WebElement amount;
+	
+	
 
 	public ManageOfferCodePage(WebDriver driver) {
 
@@ -113,6 +118,15 @@ public class ManageOfferCodePage {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		return generalutility.getCssSelectorValue(resetButton, "font-size");
 
+	}
+	
+	public String getEnteredAmount() {
+		
+		GeneralUtility generalutility = new GeneralUtility(driver);
+		return generalutility.getTextOfElement(amount);
+		
+		
+		
 	}
 
 }

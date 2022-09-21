@@ -23,6 +23,12 @@ public class GeneralUtility {
 		return element.getText();
 
 	}
+	
+	public String getTextOfElement(String xpath) {
+
+		return driver.findElement(By.xpath(xpath)).getText();
+
+	}
 
 	public boolean isElementTextMatches(String expectedtext, WebElement element) {
 

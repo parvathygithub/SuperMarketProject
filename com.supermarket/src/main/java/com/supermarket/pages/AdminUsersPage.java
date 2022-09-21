@@ -12,7 +12,7 @@ import com.supermarket.utilities.PageUtility;
 public class AdminUsersPage {
 
 	WebDriver driver;
-	ExcelUtility excel = new ExcelUtility();
+	
 	GeneralUtility generalutility;
 	PageUtility pageutility;
 
@@ -91,13 +91,10 @@ public class AdminUsersPage {
 
 	}
 
-	public void addAdminUsersInformations(String userType) {
+	public void addAdminUsersInformations(String userName, String password, String userType) {
 
 		clickOnAdminUsers();
 		clickOnNewButton();
-		excel.setExcelFile("NewAdminUsers", "AdminUsers");
-		String userName = excel.getCellData(1, 0);
-		String password = excel.getCellData(1, 1);
 		enterUserName(userName);
 		enterPassword(password);
 		selectUserType(userType);

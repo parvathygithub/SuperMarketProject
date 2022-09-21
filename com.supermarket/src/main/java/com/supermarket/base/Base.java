@@ -89,7 +89,7 @@ public class Base {
 
 		}
 
-		//driver.close();
+		driver.close();
 
 	}
 

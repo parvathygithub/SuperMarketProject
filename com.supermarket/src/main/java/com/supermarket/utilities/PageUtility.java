@@ -1,5 +1,6 @@
 package com.supermarket.utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,6 +22,10 @@ public class PageUtility {
 
 	public void ClearTextField(WebElement element) {
 		element.clear();
+	}
+	
+	public void ClearTextField(String xpath ) {
+		driver.findElement(By.xpath(xpath)).clear();
 	}
 
 	public void select_ByIndex(WebElement element, int index) {

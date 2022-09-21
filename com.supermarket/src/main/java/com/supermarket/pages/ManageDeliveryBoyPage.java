@@ -1,19 +1,19 @@
 package com.supermarket.pages;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.supermarket.utilities.ExcelUtility;
+//import com.supermarket.utilities.ExcelUtility;
 import com.supermarket.utilities.GeneralUtility;
 import com.supermarket.utilities.PageUtility;
 
 public class ManageDeliveryBoyPage {
 
 	WebDriver driver;
-	ExcelUtility excel = new ExcelUtility();
-	GeneralUtility generalutility;
+    GeneralUtility generalutility;
 	PageUtility pageutility;
 
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy']")
@@ -104,18 +104,11 @@ public class ManageDeliveryBoyPage {
 		saveButton.click();
 	}
 
-	public void addDeliveryBoyInformations() {
+	public void addDeliveryBoyInformations( String name, String email,String address,String userName,String password,String phoneNumber) {
 
 		clickOnManageDeliveryBoy();
 		clickOnNewButton();
 		pageutility = new PageUtility(driver);
-		excel.setExcelFile("DeliveryBoyData", "DeliveryBoyInformations");
-		String name = excel.getCellData(1, 0);
-		String email = excel.getCellData(1, 1);
-		String address = excel.getCellData(1, 2);
-		String userName = excel.getCellData(1, 3);
-		String password = excel.getCellData(1, 4);
-		String phoneNumber = excel.getCellData(1, 5);
 		enterName(name);
 		enterEmail(email);
 		enterPhoneNumber(phoneNumber);

@@ -25,11 +25,17 @@ public void waitForElementToBEClickable(String xpath,WebDriver driver){
 	WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(EXPLICIT_WAIT));
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 }
+
 public void waitAndClick(String xpath,WebDriver driver) {
 	WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(EXPLICIT_WAIT));
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 	driver.findElement(By.xpath(xpath)).click();
 }
-
 	
+
+public void waitAndClick(String xpath,WebDriver driver,int x) {
+	WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(EXPLICIT_WAIT));
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+	driver.findElement(By.xpath(xpath)).click();
+}
 }
